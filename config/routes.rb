@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/allcategories", to: redirect("/categories")
 
   get "/soups/:id/toggle_featured", to: "soups#toggle_featured", as: :toggle_featured
+
+  get "/secret_soups", to: "soups#secret_soups"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
