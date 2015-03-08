@@ -33,12 +33,7 @@ class SoupsController < ApplicationController
 	end
 
 	def toggle_featured
-		if @soup.featured?
-			@soup.update(featured: false)
-		else
-			@soup.update(featured: true)
-		end
-
+		@soup.toggle!(:featured)
 		redirect_to @soup
 	end
 
